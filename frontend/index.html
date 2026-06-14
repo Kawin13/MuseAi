@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuseAI — Intelligent Music Composer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="#" class="logo" aria-label="MuseAI home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="15" fill="url(#lgHeader)"/>
+            <path d="M9.5 20.5V11l11-2.5v10" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9.5" cy="20.5" r="2.2" fill="#fff"/>
+            <circle cx="20.5" cy="18.5" r="2.2" fill="#fff"/>
+            <defs>
+              <linearGradient id="lgHeader" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#7c3aed"/>
+                <stop offset="1" stop-color="#4f46e5"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">MuseAI</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Page sections">
+        <a href="#section-compose" class="nav-link">Compose</a>
+        <a href="#section-library" class="nav-link">Library</a>
+      </nav>
+
+      <div id="health-badge" class="status-pill status-pill--pending" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-label">Online</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob--3" aria-hidden="true"></div>
+
+    <div class="hero-visualizer" aria-hidden="true">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-pill" aria-hidden="true">
+        <span class="pill-dot"></span>
+        AI-Assisted Music Creation
+      </div>
+
+      <h1 id="hero-heading" class="hero-title">
+        Original Music,<br><em>Generated&nbsp;Instantly</em>
+      </h1>
+
+      <p class="hero-sub">
+        Compose unique MIDI melodies in seconds. Adjust creativity, length,
+        and style — then download and use in any DAW.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#section-compose" class="btn btn--hero">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Start Composing
+        </a>
+        <a href="#section-library" class="btn btn--hero-outline">
+          View Library
+        </a>
+      </div>
+
+      <div class="hero-stats" aria-label="Key features">
+        <div class="hero-stat">
+          <span class="hero-stat__value">500+</span>
+          <span class="hero-stat__label">Notes per composition</span>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__value">MIDI</span>
+          <span class="hero-stat__label">Universal export format</span>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__value">∞</span>
+          <span class="hero-stat__label">Unique compositions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FEATURES STRIP
+  ══════════════════════════════════════════════════════ -->
+  <div class="features-strip" aria-label="Features">
+    <div class="features-inner">
+      <div class="feature-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Instant Creation
+      </div>
+      <div class="feature-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        MIDI Export
+      </div>
+      <div class="feature-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Adjustable Creativity
+      </div>
+      <div class="feature-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Browser-Based
+      </div>
+      <div class="feature-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        One-Click Download
+      </div>
+      <div class="feature-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Fast Processing
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       COMPOSE
+  ══════════════════════════════════════════════════════ -->
+  <main id="section-compose" class="compose-section">
+    <div class="section-inner">
+
+      <header class="section-header">
+        <div class="section-eyebrow">Compose</div>
+        <h2 class="section-title">Create Your Composition</h2>
+        <p class="section-sub">Prepare the music engine, tune your settings, and generate an original melody.</p>
+      </header>
+
+      <div class="compose-grid">
+
+        <!-- Card 01 — Prepare Engine -->
+        <article class="glass-card" aria-labelledby="card-prepare-title">
+          <div class="card-badge" aria-hidden="true">01</div>
+
+          <div class="card-icon card-icon--violet" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+
+          <h3 class="card-title" id="card-prepare-title">Prepare Music Engine</h3>
+          <p class="card-body">Analyse musical patterns from the built-in melody library. Only needed once — or whenever you want a fresh creative palette.</p>
+
+          <div class="field-group">
+            <label class="field-label" for="epochs-input">
+              Learning cycles
+              <span class="field-hint">Higher = richer patterns, longer wait</span>
+            </label>
+            <div class="input-row">
+              <input id="epochs-input" class="field-input" type="number" min="1" max="200" value="50" />
+              <span class="input-unit" aria-hidden="true">cycles</span>
+            </div>
+          </div>
+
+          <button class="btn btn--primary" id="btn-train" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Prepare Music Engine
+          </button>
+
+          <div class="status-panel" id="train-status" hidden role="status" aria-live="polite">
+            <div class="status-panel__row">
+              <span class="spinner" id="train-spinner" aria-hidden="true"></span>
+              <span class="status-panel__text" id="train-status-text">Initialising…</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="progress-fill" id="train-progress-fill"></div>
+            </div>
+            <p class="status-panel__note">This may take several minutes. You can leave this tab open.</p>
+          </div>
+        </article>
+
+        <!-- Card 02 — Generate -->
+        <article class="glass-card" aria-labelledby="card-generate-title">
+          <div class="card-badge" aria-hidden="true">02</div>
+
+          <div class="card-icon card-icon--gold" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+
+          <h3 class="card-title" id="card-generate-title">Generate Your Melody</h3>
+          <p class="card-body">Tune the composition length and creativity level, then let the engine craft a completely original melody.</p>
+
+          <div class="field-group">
+            <label class="field-label" for="length-input">
+              Composition length
+              <span class="field-hint">Number of notes to generate</span>
+            </label>
+            <div class="input-row">
+              <input id="length-input" class="field-input" type="number" min="50" max="2000" value="500" />
+              <span class="input-unit" aria-hidden="true">notes</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="temp-input">
+              Creativity level
+              <span class="field-hint">Conservative ↔ Experimental</span>
+            </label>
+            <div class="slider-row">
+              <span class="slider-label" aria-hidden="true">Safe</span>
+              <input id="temp-input" class="range-input" type="range"
+                     min="0.1" max="2.0" step="0.05" value="1.0"
+                     aria-valuemin="0.1" aria-valuemax="2.0" aria-valuenow="1.0" />
+              <span class="slider-label" aria-hidden="true">Bold</span>
+            </div>
+            <div class="slider-readout">
+              <span class="slider-readout__label">Level</span>
+              <span class="slider-readout__value" id="temp-value" aria-live="polite">1.00</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="seed-input">
+              Composition seed
+              <span class="field-hint">Leave blank for a unique result every time</span>
+            </label>
+            <input id="seed-input" class="field-input" type="number" placeholder="optional" />
+          </div>
+
+          <button class="btn btn--accent" id="btn-generate" type="button" disabled>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Generate Music
+          </button>
+
+          <div class="status-panel" id="gen-status" hidden role="status" aria-live="polite">
+            <div class="status-panel__row">
+              <span class="spinner" id="gen-spinner" aria-hidden="true"></span>
+              <span class="status-panel__text" id="gen-status-text">Composing…</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       LIBRARY
+  ══════════════════════════════════════════════════════ -->
+  <section id="section-library" class="library-section" aria-labelledby="library-heading">
+    <div class="section-inner">
+
+      <header class="section-header">
+        <div class="section-eyebrow">Library</div>
+        <h2 class="section-title" id="library-heading">Your Compositions</h2>
+        <p class="section-sub">All generated MIDI files — ready to download and use in any DAW.</p>
+      </header>
+
+      <div class="library-panel">
+        <div class="library-toolbar">
+          <button class="btn btn--outline-violet" id="btn-download" type="button" disabled>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Latest
+          </button>
+          <span class="library-count" id="library-count" aria-live="polite">0 compositions</span>
+        </div>
+
+        <ul class="song-list" id="song-list" role="list">
+          <li class="empty-state-item">
+            <div class="empty-state">
+              <div class="empty-state__icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </div>
+              <p class="empty-state__title">No compositions yet</p>
+              <p class="empty-state__body">Generate your first melody above and it will appear here.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-main">
+      <div class="footer-inner">
+
+        <!-- Left: brand -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="MuseAI">
+            <div class="logo-mark" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="15" cy="15" r="15" fill="url(#lgFooter)"/>
+                <path d="M9.5 20.5V11l11-2.5v10" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9.5" cy="20.5" r="2.2" fill="#fff"/>
+                <circle cx="20.5" cy="18.5" r="2.2" fill="#fff"/>
+                <defs>
+                  <linearGradient id="lgFooter" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7c3aed"/>
+                    <stop offset="1" stop-color="#4f46e5"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="footer-logo-text">MuseAI</span>
+          </a>
+          <p class="footer-tagline">Create unique AI-generated MIDI music in seconds.</p>
+        </div>
+
+        <!-- Center: quick links -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <p class="footer-nav-heading">Quick Links</p>
+          <ul class="footer-nav-list">
+            <li><a href="#section-compose" class="footer-nav-link">Compose</a></li>
+            <li><a href="#section-library" class="footer-nav-link">Library</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right: features -->
+        <div class="footer-features">
+          <p class="footer-nav-heading">Features</p>
+          <ul class="footer-features-list">
+            <li>AI Music Generation</li>
+            <li>MIDI Export</li>
+            <li>Creative Controls</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">© 2026 MuseAI. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Toast container (populated by JS) -->
+  <div id="toast-container" class="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+</body>
+</html>

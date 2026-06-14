@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables
+.env
+.env.local
+
+# TensorFlow / Keras
+*.h5
+*.ckpt
+*.ckpt.index
+*.ckpt.data*
+
+# Generated & model files (add back when pre-training)
+backend/models/*.pkl
+backend/models/*.keras
+backend/models/checkpoint.keras
+backend/generated/*.mid
+
+# Dataset (large, not committed)
+backend/dataset/
+
+# SQLite DB
+backend/music.db
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
